@@ -50,6 +50,14 @@ angular.module('comment', [])
 ]);
 
 function myCtrl($scope) {
+    
+    $scope.tabs =[
+      {title:'testing 741', upvotes:5},
+      {title:'testing 742', upvotes:6},
+      {title:'testing 743', upvotes:1},
+      {title:'testing 744', upvotes:4},
+      {title:'testing 745', upvotes:3}
+    ];
     //initiate an array to hold all active tabs
     $scope.activeTabs = [];
 
