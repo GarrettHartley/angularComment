@@ -49,8 +49,16 @@ angular.module('comment', [])
   }
 ]);
 
-function myCtrl($scope) {
+// function myCtrl($scope) {
     
+// }
+
+angular.module('tabs', [])
+.controller('MainCtrl', [
+  '$scope','$http',
+  function($scope,$http){
+$scope.test = 'Hello world! in tabs';
+   
     $scope.tabs =[
       {title:'testing 741', upvotes:5},
       {title:'testing 742', upvotes:6},
@@ -84,4 +92,5 @@ function myCtrl($scope) {
             $scope.activeTabs.push(tab);
         }
     }
-}
+  }
+]);
