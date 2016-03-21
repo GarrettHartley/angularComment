@@ -64,11 +64,14 @@ app.controller('MainTabCtrl', [
       {title:'testing 744', upvotes:4},
       {title:'testing 745', upvotes:3}
     ];
+
+
     //initiate an array to hold all active tabs
     $scope.activeTabs = [];
 
     //check if the tab is active
     $scope.isOpenTab = function (tab) {
+      console.log("in isOpen tab: "+tab)
         //check if this tab is already in the activeTabs array
         if ($scope.activeTabs.indexOf(tab) > -1) {
             //if so, return true
@@ -81,6 +84,7 @@ app.controller('MainTabCtrl', [
     
     //function to 'open' a tab
     $scope.openTab = function (tab) {
+        console.log("in open tab: "+tab)
         //check if tab is already open
         if ($scope.isOpenTab(tab)) {
             //if it is, remove it from the activeTabs array
