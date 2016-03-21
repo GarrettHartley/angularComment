@@ -97,74 +97,26 @@ app.controller('MainTabCtrl', [
     }
 
     $scope.addTab = function(input_title,input_content){
-      $scope.tabs.push({title:input_title, content: input_content})
-    }
-
-
-
-
-
-
-  }
-]);
-
-
-function tabs($scope) {
-    $scope.test = 'Hello world! in tabs';
-   
-    $scope.tabs =[
-      {title:'testing 741', upvotes:5},
-      {title:'testing 742', upvotes:6},
-      {title:'testing 743', upvotes:1},
-      {title:'testing 744', upvotes:4},
-      {title:'testing 745', upvotes:3}
-    ];
-    //initiate an array to hold all active tabs
-    $scope.activeTabs = [];
-
-    //check if the tab is active
-    $scope.isOpenTab = function (tab) {
-        //check if this tab is already in the activeTabs array
-        if ($scope.activeTabs.indexOf(tab) > -1) {
-            //if so, return true
-            return true;
-        } else {
-            //if not, return false
-            return false;
-        }
-    }
+      console.log("In add tab with "+$scope.title+" and "+$scope.content);
+      $scope.tabs.push({title:$scope.title, content: $scope.content})
     
-    //function to 'open' a tab
-    $scope.openTab = function (tab) {
-        //check if tab is already open
-        if ($scope.isOpenTab(tab)) {
-            //if it is, remove it from the activeTabs array
-            $scope.activeTabs.splice($scope.activeTabs.indexOf(tab), 1);
-        } else {
-            //if it's not, add it!
-            $scope.activeTabs.push(tab);
-        }
     }
 
-
-    $scope.addTab = function() {
-      // if($scope.title === '') { return; }
-      console.log("In addComment with "+$scope.title+" and "+$scope.content);
-      // $scope.create({
-      //   title: $scope.title,
-      //   upvotes: $scope.content,
-      // });
-      // $scope.formContent = '';
-    };
-
+    // $scope.addTab = function() {
+    //   // if($scope.title === '') { return; }
+    //   console.log("In add tab with "+$scope.title+" and "+$scope.content);
+    //   // $scope.create({
+    //   //   title: $scope.title,
+    //   //   upvotes: $scope.content,
+    //   // });
+    //   // $scope.formContent = '';
+    // };
 
 
-}
 
-angular.module('tabs', [])
-.controller('MainTabCtrl', [
-  '$scope','$http',
-  function($scope,$http){
 
   }
 ]);
+
+
+
