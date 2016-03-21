@@ -49,15 +49,8 @@ angular.module('comment', [])
   }
 ]);
 
-// function myCtrl($scope) {
-    
-// }
-
-angular.module('tabs', [])
-.controller('MainTabCtrl', [
-  '$scope','$http',
-  function($scope,$http){
-$scope.test = 'Hello world! in tabs';
+function tabs($scope) {
+    $scope.test = 'Hello world! in tabs';
    
     $scope.tabs =[
       {title:'testing 741', upvotes:5},
@@ -92,5 +85,12 @@ $scope.test = 'Hello world! in tabs';
             $scope.activeTabs.push(tab);
         }
     }
+}
+
+angular.module('tabs', [])
+.controller('MainTabCtrl', [
+  '$scope','$http',
+  function($scope,$http){
+
   }
 ]);
