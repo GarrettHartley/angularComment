@@ -32,23 +32,26 @@
 
 <div ng-controller="MainTabCtrl">
     {{test}}
-    <div ng-repeat="tab in tabs">
-      <div class="accordion__tab--title" ng-click="openTab('tab {{$index}}')">{{tab.title}}</div>
-      <div class="accordion__tab--content" ng-show="isOpenTab('tab {{$index}}')">{{tab.upvotes}}</div>
-    </div>
+
 
     <div class="accordion__container">
+        
+        <div ng-repeat="tab in tabs">
+          <div class="accordion__tab--title" ng-click="openTab('tab {{$index}}')">{{tab.title}}</div>
+          <div class="accordion__tab--content" ng-show="isOpenTab('tab {{$index}}')">{{tab.upvotes}}</div>
+        </div>
+
         <div class="accordion__tab">
-            <div class="accordion__tab--title" ng-click="openTab('tab one')">Tab 1</div>
-            <div class="accordion__tab--content" ng-show="isOpenTab('tab one')">Tab content goes here!</div>
+            <div class="accordion__tab--title" ng-click="openTab('tab 1')">Tab 1</div>
+            <div class="accordion__tab--content" ng-show="isOpenTab('tab 1')">Tab content goes here!</div>
         </div>
         <div class="accordion__tab">
-            <div class="accordion__tab--title" ng-click="openTab('tab two')">Tab 2</div>
-            <div class="accordion__tab--content" ng-show="isOpenTab('tab two')">Tab content goes here!</div>
+            <div class="accordion__tab--title" ng-click="openTab('tab 2')">Tab 2</div>
+            <div class="accordion__tab--content" ng-show="isOpenTab('tab 2')">Tab content goes here!</div>
         </div>
         <div class="accordion__tab">
-            <div class="accordion__tab--title" ng-click="openTab('tab three')">Tab 3</div>
-            <div class="accordion__tab--content" ng-show="isOpenTab('tab three')">Tab content goes here!</div>
+            <div class="accordion__tab--title" ng-click="openTab('tab 3')">Tab 3</div>
+            <div class="accordion__tab--content" ng-show="isOpenTab('tab 3')">Tab content goes here!</div>
         </div>
     </div>
 </div>
