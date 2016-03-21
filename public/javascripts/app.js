@@ -71,7 +71,7 @@ app.controller('MainTabCtrl', [
 
     //check if the tab is active
     $scope.isOpenTab = function (tab) {
-      console.log("in isOpen tab: "+tab)
+      // console.log("in isOpen tab: "+tab)
         //check if this tab is already in the activeTabs array
         if ($scope.activeTabs.indexOf(tab) > -1) {
             //if so, return true
