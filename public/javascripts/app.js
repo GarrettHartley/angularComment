@@ -59,11 +59,8 @@ app.controller('MainTabCtrl', [
     $scope.test = 'Hello world! in tabs';
    
     $scope.tabs =[
-      {title:'testing 741', content:5},
-      {title:'testing 742', content:6},
-      {title:'testing 743', content:1},
-      {title:'testing 744', content:4},
-      {title:'testing 745', content:3}
+      {title:'This is a tab', content:'This is a note within the tab'}
+
     ];
 
 
@@ -101,18 +98,6 @@ app.controller('MainTabCtrl', [
       $scope.tabs.push({title:$scope.title, content: $scope.content})
     
     }
-
-    // $scope.addTab = function() {
-    //   // if($scope.title === '') { return; }
-    //   console.log("In add tab with "+$scope.title+" and "+$scope.content);
-    //   // $scope.create({
-    //   //   title: $scope.title,
-    //   //   upvotes: $scope.content,
-    //   // });
-    //   // $scope.formContent = '';
-    // };
-
-
 
 
   }
