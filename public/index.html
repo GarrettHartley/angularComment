@@ -7,8 +7,7 @@
   <link href="stylesheets/style.css" rel="stylesheet">
 
 </head>
-<body>
-  <div ng-app="comment" ng-controller="MainCtrl" >
+<body ng-app="comment" ng-controller="MainCtrl">
     <div class="row">
     <div class="col-md-6 col-md-offset-3">
     <div class="page-header">
@@ -28,9 +27,9 @@
       </div>
     </div>
     </div>
-</div>
 
-<div  ng-app="tabs" ng-controller="MainTabCtrl">
+
+<div ng-controller="MainTabCtrl">
     <div ng-repeat"tab in tabs">
     <span> {{tab.title}}</span>
     </div>
