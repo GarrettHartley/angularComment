@@ -150,11 +150,11 @@ function tabs($scope) {
     $scope.addTab = function() {
       if($scope.title === '') { return; }
       console.log("In addComment with "+$scope.title+" and "+$scope.content);
-      $scope.create({
-        title: $scope.title,
-        upvotes: $scope.content,
-      });
-      $scope.formContent = '';
+      // $scope.create({
+      //   title: $scope.title,
+      //   upvotes: $scope.content,
+      // });
+      // $scope.formContent = '';
     };
 
 
