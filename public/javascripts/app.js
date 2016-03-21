@@ -50,6 +50,63 @@ app.controller('MainCtrl', [
   }
 ]);
 
+app.controller('MainTabCtrl', [
+  '$scope','$http',
+  
+  function($scope,$http){
+    $scope.test = 'Hello world!';
+    $scope.comments = [
+      {title:'Comment 1', upvotes:5},
+      {title:'Comment 2', upvotes:6},
+      {title:'Comment 3', upvotes:1},
+      {title:'Comment 4', upvotes:4},
+      {title:'Comment 5', upvotes:3}
+    ];
+        $scope.test = 'Hello world! in tabs';
+   
+    $scope.tabs =[
+      {title:'testing 741', upvotes:5},
+      {title:'testing 742', upvotes:6},
+      {title:'testing 743', upvotes:1},
+      {title:'testing 744', upvotes:4},
+      {title:'testing 745', upvotes:3}
+    ];
+    //initiate an array to hold all active tabs
+    $scope.activeTabs = [];
+
+    //check if the tab is active
+    $scope.isOpenTab = function (tab) {
+        //check if this tab is already in the activeTabs array
+        if ($scope.activeTabs.indexOf(tab) > -1) {
+            //if so, return true
+            return true;
+        } else {
+            //if not, return false
+            return false;
+        }
+    }
+    
+    //function to 'open' a tab
+    $scope.openTab = function (tab) {
+        //check if tab is already open
+        if ($scope.isOpenTab(tab)) {
+            //if it is, remove it from the activeTabs array
+            $scope.activeTabs.splice($scope.activeTabs.indexOf(tab), 1);
+        } else {
+            //if it's not, add it!
+            $scope.activeTabs.push(tab);
+        }
+    }
+
+
+
+
+
+
+  }
+]);
+
+
 function tabs($scope) {
     $scope.test = 'Hello world! in tabs';
    
