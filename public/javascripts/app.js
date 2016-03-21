@@ -1,5 +1,6 @@
-angular.module('comment', [])
-.controller('MainCtrl', [
+var app = angular.module('comment', []);
+
+app.controller('MainCtrl', [
   '$scope','$http',
   function($scope,$http){
     $scope.test = 'Hello world!';
