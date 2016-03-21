@@ -27,3 +27,7 @@ a {
     background: #999;
     padding: 20px;
 }
+
+.accordion__tab form {
+    color: black;
+}
