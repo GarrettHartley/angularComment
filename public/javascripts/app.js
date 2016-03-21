@@ -50,7 +50,7 @@ app.controller('MainCtrl', [
   }
 ]);
 
-app.controller('MainTabCtrl', [
+app.controller('tabs', [
   '$scope','$http',
   
   function($scope,$http){
