@@ -31,8 +31,6 @@
 </div>
 
 <div ng-controller="MainTabCtrl">
-    {{test}}
-
 
     <div class="accordion__container">
         
@@ -45,8 +43,8 @@
             <div class="accordion__tab--title" ng-click="openTab('tab add')">Add Tab</div>
             <div class="accordion__tab--content" ng-show="isOpenTab('tab add')">
                   <form ng-submit="addTab()">
-                    <input type="text" ng-model="title"></input>
-                    <input type="text" ng-model="content"></input>
+                    Title: <input type="text" ng-model="title"></input><br>
+                    Tab Content: <input type="text" ng-model="content"></input><br>
                     <button type="submit">Add Tab</button>
                   </form>
             </div>
