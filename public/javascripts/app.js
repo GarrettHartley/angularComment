@@ -11,6 +11,7 @@ app.controller('MainCtrl', [
       {title:'Comment 4', upvotes:4},
       {title:'Comment 5', upvotes:3}
     ];
+
     $scope.addComment = function() {
       if($scope.formContent === '') { return; }
       console.log("In addComment with "+$scope.formContent);
@@ -58,11 +59,11 @@ app.controller('MainTabCtrl', [
     $scope.test = 'Hello world! in tabs';
    
     $scope.tabs =[
-      {title:'testing 741', upvotes:5},
-      {title:'testing 742', upvotes:6},
-      {title:'testing 743', upvotes:1},
-      {title:'testing 744', upvotes:4},
-      {title:'testing 745', upvotes:3}
+      {title:'testing 741', content:5},
+      {title:'testing 742', content:6},
+      {title:'testing 743', content:1},
+      {title:'testing 744', content:4},
+      {title:'testing 745', content:3}
     ];
 
 
@@ -93,6 +94,10 @@ app.controller('MainTabCtrl', [
             //if it's not, add it!
             $scope.activeTabs.push(tab);
         }
+    }
+
+    $scope.addTab = function(input_title,input_content){
+      $scope.tabs.push({title:input_title, content: input_content})
     }
 
 
@@ -140,6 +145,20 @@ function tabs($scope) {
             $scope.activeTabs.push(tab);
         }
     }
+
+
+    $scope.addTab = function() {
+      if($scope.title === '') { return; }
+      console.log("In addComment with "+$scope.title+" and "+$scope.content);
+      $scope.create({
+        title: $scope.title,
+        upvotes: $scope.content,
+      });
+      $scope.formContent = '';
+    };
+
+
+
 }
 
 angular.module('tabs', [])

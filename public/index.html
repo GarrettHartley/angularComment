@@ -38,21 +38,20 @@
         
         <div ng-repeat="tab in tabs">
           <div class="accordion__tab--title" ng-click="openTab('tab '+$index)">{{tab.title}}</div>
-          <div class="accordion__tab--content" ng-show="isOpenTab('tab {{$index}}')">{{tab.upvotes}}</div>
+          <div class="accordion__tab--content" ng-show="isOpenTab('tab {{$index}}')">{{tab.content}}</div>
         </div>
 
         <div class="accordion__tab">
-            <div class="accordion__tab--title" ng-click="openTab('tab 1')">Tab 1</div>
-            <div class="accordion__tab--content" ng-show="isOpenTab('tab 1')">Tab content goes here!</div>
+            <div class="accordion__tab--title" ng-click="openTab('tab add')">Add Tab</div>
+            <div class="accordion__tab--content" ng-show="isOpenTab('tab add')">
+                  <form ng-submit="addTab()">
+                    <input type="text" ng-model="title"></input>
+                    <input type="text" ng-model="content"></input>
+                    <button type="submit">Add Tab</button>
+                  </form>
+            </div>
         </div>
-        <div class="accordion__tab">
-            <div class="accordion__tab--title" ng-click="openTab('tab 2')">Tab 2</div>
-            <div class="accordion__tab--content" ng-show="isOpenTab('tab 2')">Tab content goes here!</div>
-        </div>
-        <div class="accordion__tab">
-            <div class="accordion__tab--title" ng-click="openTab('tab 3')">Tab 3</div>
-            <div class="accordion__tab--content" ng-show="isOpenTab('tab 3')">Tab content goes here!</div>
-        </div>
+
     </div>
 </div>
 </body>
