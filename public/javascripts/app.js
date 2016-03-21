@@ -54,7 +54,7 @@ angular.module('comment', [])
 // }
 
 angular.module('tabs', [])
-.controller('MainCtrl', [
+.controller('MainTabCtrl', [
   '$scope','$http',
   function($scope,$http){
 $scope.test = 'Hello world! in tabs';
